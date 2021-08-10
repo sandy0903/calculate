@@ -1,0 +1,243 @@
+/*********Base element*********/
+/********* Colors********/
+/*Primary color */
+/*Neutral color */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/********Font sizes**********/
+/*Font size for form input*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/********Font sizes**********/
+/*Font size for form input*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+ul li, ol li {
+  padding: 0;
+  margin: 0;
+}
+
+ul li a, ol li a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  padding: 0;
+  margin: 0;
+}
+
+/*********Components**********/
+/********* Colors********/
+/*Primary color */
+/*Neutral color */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.container .container__img {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.container .container__main {
+  background-color: white;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .container__main .container__main-left {
+  width: 50%;
+  padding-right: 3rem;
+}
+
+.container .container__main .main__result {
+  width: 50%;
+  background-color: #00494d;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+}
+
+.container .container__main .main__result p {
+  color: #5e7a7d;
+}
+
+.container .container__main .main__result h1 {
+  color: #26c0ab;
+}
+
+.container .container__main .main__result .main__result--person,
+.container .container__main .main__result .main__result--total {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 485px) {
+  .container .container__main {
+    display: block;
+    padding: 1.5rem;
+    width: 100% !important;
+    margin: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .container .container__main .container__main-left {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 3rem;
+  }
+  .container .container__main .main__result {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+/*********Layout************/
+/********* Colors********/
+/*Primary color */
+/*Neutral color */
+/********Font sizes**********/
+/*Font size for form input*/
+:root {
+  --display:none;
+}
+
+/* two parent elements inputs for user*/
+.main__input,
+.main__number--people {
+  max-width: 100%;
+  position: relative;
+  /* logo icon in input field */
+}
+
+.main__input span,
+.main__number--people span {
+  position: absolute;
+  left: 1.3rem;
+  bottom: 1.3rem;
+}
+
+.main__number--people h3::after {
+  content: "Can't be zero!";
+  color: red;
+  float: right;
+  display: var(--display);
+}
+
+/*style input type="text"*/
+#custom h1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#custom h1 input[type=number] {
+  padding: 0;
+}
+
+input[type=text] {
+  border: none;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0;
+}
+
+/*style input*/
+input[type=number],
+button {
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #00494d;
+  font-weight: 700;
+  background-color: #f4fafa;
+  font-size: 24px;
+  text-align: right;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* specific input for change color of border but not change the size of whole page*/
+input[type=number] {
+  border: 3px solid white;
+}
+
+/* adding more style for reset button */
+button {
+  background-color: #26c0ab;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 485px) {
+  button {
+    margin-top: 1rem;
+  }
+}
+
+button:hover {
+  background-color: #c5e4e7;
+}
+
+input[type=number]:focus,
+input[type=number]:hover {
+  border-color: #26c0ab;
+}
+
+/********* Colors********/
+/*Primary color */
+/*Neutral color */
+/* Select percent tip for user */
+.main__select--tips {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  text-align: center;
+}
+
+.main__select--tips .active {
+  background-color: #26c0ab !important;
+  color: #00494d;
+}
+
+.main__select--tips .main__select--tip {
+  background-color: #00494d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__select--tips .main__select--tip:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
+.main__select--tips .main__select--tip h1 {
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */

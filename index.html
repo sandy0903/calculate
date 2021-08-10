@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!--Container of website -->
+  <div class="container">
+    <div class="container__img">
+      <img src="/images/logo.svg" alt="website logo">
+
+    </div>
+  <!--Main content of website Showing all information-->
+    <div class="container__main">
+      <div class="container__main-left">
+ <!--Input Amount of money for calculating tip-->
+        <div class="main__input">
+          <h3>Bill</h3>
+
+            <input type="number" id="bill-price">
+            <span><img src="./images/icon-dollar.svg" alt="dollar icon"></span>
+          
+        </div>
+        <!--Selecting percent of money-tip denpend on the whole amount of money-->
+        <div class="main__select">
+          <h3>Select Tip %</h3>
+        <!--Choices of percent of money-tip -->
+          <div class="main__select--tips">
+            <div class="main__select--tip">
+              <h1>5<span>%</span></h1>
+            </div>
+            <div class="main__select--tip">
+              <h1>10<span>%</span></h1>
+            </div>
+            <div class="main__select--tip active">
+              <h1>15<span>%</span></h1>
+            </div>
+            <div class="main__select--tip">
+              <h1>25<span>%</span></h1>
+            </div>
+            <div class="main__select--tip">
+              <h1>50<span>%</span></h1>
+            </div>
+            <div class="main__select--tip"  id="custom">
+              <h1><input type="text" value="Custom" id="custom-num"></h1>
+              <!--<input type="number" >-->
+            </div>
+          </div>
+        </div>
+        <!--Number of people at table-->
+        <div class="main__number--people">
+          <h3 id="txt">Number of People</h3>
+          <input type="number" id="quatity">
+          <span><img src="./images/icon-person.svg" alt="person"></span>
+        </div>
+      </div>
+ 
+  <!--Result Table-->
+      <div class="main__result">
+  <!--Tip amount per person at the table-->
+        <div class="main__result--person">
+          <h3>Tip Amount 
+            <p>/person</p>
+          </h3>
+          <h1 id="tip-person">$0.00</h1>
+        </div>
+  <!--Total amount of money tip-->
+        <div class="main__result--total">
+          <h3>Total <p>/person</p></h3>
+          <h1 id="tip-total">$0.00</h1>
+        </div>
+        <button type="reset" id="reset" >Reset</button>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sandy</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

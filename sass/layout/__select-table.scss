@@ -1,0 +1,32 @@
+@import "../base/_colors";
+/* Select percent tip for user */
+.main__select--tips{
+    display:grid;
+    width:100%;
+    height:auto;
+    grid-gap:10px;
+    grid-template-columns: repeat(3,1fr);
+    color:$white;
+    text-align:center;
+    .active{
+        background-color:$primary-cyan !important;
+        color:$neutral-darker-cyan;
+    }
+    
+    .main__select--tip{
+        background-color:$neutral-darker-cyan;
+        border-radius:10px;
+        cursor: pointer;
+        
+        &:hover{
+            background-color:$neutral-lightness-cyan;
+            color:$neutral-darker-cyan;
+            
+            
+        }
+        h1{
+            margin:0;
+        }
+        
+    }
+}

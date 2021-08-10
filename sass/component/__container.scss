@@ -1,0 +1,64 @@
+@import "../base/_colors";
+@import "./_mediaqueries";
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom:3rem;
+    .container__img{
+        display:flex;
+        justify-content: center;
+        padding:3rem 0;
+    }
+    .container__main{
+        background-color:$white;
+        padding:2rem ;
+        width:80%;
+        margin:auto;
+        border-radius:20px;
+        display:flex;
+        justify-content: space-between;
+        .container__main-left{
+            width:50%;
+            padding-right:3rem;
+        }
+        .main__result{
+            width:50%;
+            background-color:$neutral-darker-cyan;
+            color:#fff;
+            border-radius:20px;
+            padding:2rem 3rem;
+            p{
+                color:$neutral-dark-cyan;
+            }
+            h1{
+                color:$primary-cyan;
+            }
+            .main__result--person,
+            .main__result--total{
+                display:flex;
+                justify-content: space-between;
+            }
+        }
+        @include mobile{
+            display:block;
+            padding:1.5rem ;
+            width:100% !important;
+            margin:0;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            .container__main-left{
+                width:100% ;
+                padding-right:0;
+                padding-bottom:3rem;
+            };
+            .main__result{
+                width:100%;
+                padding:1.5rem;
+
+            }
+        }
+        
+    }
+    
+}

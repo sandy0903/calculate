@@ -1,0 +1,105 @@
+@import "../base/_colors";
+@import "../base/_font";
+@import "../component/_mediaqueries";
+
+:root{
+  --display:none;
+}
+/* two parent elements inputs for user*/
+
+.main__input,
+.main__number--people{
+    max-width:100%;
+    position: relative;
+/* logo icon in input field */
+    
+    span{
+        position:absolute;
+        left:1.3rem;
+        bottom:1.3rem;
+        
+    }
+    
+
+}
+.main__number--people{
+    h3::after{
+        content:"Can't be zero!";
+        color:red;
+        float:right;
+        display:var(--display)        
+
+    }
+}
+/*style input type="text"*/
+#custom h1{
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    input[type=number]{
+        padding:0;
+    }
+}
+input[type=text]{
+    border:none;
+    width:100%;
+    font-size:$font-size;
+    font-weight: $font-weight-bold;
+    text-align:center;
+    padding:6px 0;
+    
+}
+
+/*style input*/
+
+input[type=number],
+button{
+    padding:1rem;
+    width:100%;
+    outline:none;
+    border:none;
+    color:$neutral-darker-cyan;
+    font-weight:$font-weight-bold;
+    background-color:$neutral-lighten-cyan;
+    font-size:$font-size;
+    text-align:right;
+    border-radius: 15px;
+    cursor:pointer;
+
+
+}
+
+/* specific input for change color of border but not change the size of whole page*/
+input[type=number]{
+    border:3px solid $white;
+    
+
+}
+
+/* adding more style for reset button */ 
+
+button{
+    background-color:$primary-cyan;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top:5rem;
+    
+    @include mobile{
+        margin-top:1rem;
+    }
+}
+//difference effect when hover 
+// For button changing bg color
+button:hover{
+    background-color: $neutral-lightness-cyan;
+}
+//For input change border color
+input[type=number]:focus,
+input[type=number]:hover{
+    border-color: $primary-cyan;
+    
+    
+}
+
+
